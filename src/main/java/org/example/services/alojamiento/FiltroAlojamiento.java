@@ -7,12 +7,13 @@ import org.example.models.Hotel;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-public class BuscarAlojamiento {
+public class FiltroAlojamiento {
 
-    public static boolean buscarAlojamiento(ArrayList<Alojamiento> alojamientos, Map<String, Object> params) {
+    public static boolean buscarAlojamiento(List<Alojamiento> alojamientos, Map<String, Object> params) {
         boolean alojamientoEncontrado = false;
         String ciudad = (String) params.get("ciudad");
         String tipo = (String) params.get("tipo");
@@ -52,7 +53,7 @@ public class BuscarAlojamiento {
         return alojamientoEncontrado;
     }
 
-    public static Alojamiento elegirAlojamiento(ArrayList<Alojamiento> alojamientos, boolean alojamientoEncontrado) {
+    public static Alojamiento elegirAlojamiento(List<Alojamiento> alojamientos, boolean alojamientoEncontrado) {
         if (alojamientoEncontrado) {
 
             Scanner scanner = new Scanner(System.in);
@@ -65,7 +66,7 @@ public class BuscarAlojamiento {
         }
     }
 
-    public static Alojamiento buscarAlojamientoPorNombre(ArrayList<Alojamiento> alojamientos, String nombreAlojamiento){
+    public static Alojamiento buscarAlojamientoPorNombre(List<Alojamiento> alojamientos, String nombreAlojamiento){
         for (int i = 0; i < alojamientos.size(); i++) {
             if (alojamientos.get(i).getNombreAlojamiento().equalsIgnoreCase(nombreAlojamiento)) {
                 return alojamientos.get(i); //objeto alojamiento

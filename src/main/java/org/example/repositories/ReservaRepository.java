@@ -1,6 +1,6 @@
 package org.example.repositories;
 
-import org.example.models.Reserva;
+import org.example.models.ReservaData;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
 public class ReservaRepository {
 
     private static ReservaRepository instance;
-    private List<Reserva> reservas;
+    private List<ReservaData> reservas;
 
     private ReservaRepository() {
         reservas = new ArrayList<>();
@@ -22,11 +22,11 @@ public class ReservaRepository {
         return instance;
     }
 
-    public List<Reserva> getReservas() {
+    public List<ReservaData> getReservas() {
         return reservas;
     }
 
-    public void addBook(Reserva reserva) {
+    public void addReserva(ReservaData reserva) {
         reservas.add(reserva);
     }
 }

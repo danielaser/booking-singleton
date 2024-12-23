@@ -2,7 +2,7 @@ package org.example.models;
 
 import java.time.LocalDate;
 
-public class Reserva {
+public class ReservaData {
 
     private Alojamiento alojamiento;
     private ClienteData cliente;
@@ -11,7 +11,7 @@ public class Reserva {
     private LocalDate inicioEstadia;
     private LocalDate finEstadia;
 
-    public Reserva(Alojamiento alojamiento, ClienteData cliente, String horaLlegadaUsuario, String[] habitacionesSeleccionadas, LocalDate inicioEstadia, LocalDate finEstadia) {
+    public ReservaData(Alojamiento alojamiento, ClienteData cliente, String horaLlegadaUsuario, String[] habitacionesSeleccionadas, LocalDate inicioEstadia, LocalDate finEstadia) {
         this.alojamiento = alojamiento;
         this.cliente = cliente;
         this.horaLlegadaUsuario = horaLlegadaUsuario;
@@ -20,7 +20,7 @@ public class Reserva {
         this.finEstadia = finEstadia;
     }
 
-    public Reserva() {
+    public ReservaData() {
     }
 
     // getters and setters
