@@ -19,8 +19,7 @@ public class BusquedaAlojamiento {
     static ReservaImplementation reservaService = new ReservaImplementation();
 
     // Crear reserva
-    static ReservaData reserva = new ReservaData(/* Inicializar con datos */);
-
+    static ReservaData reserva = new ReservaData();
 
     public static void ingresarBusqueda() {
         System.out.println("¡Bienvenido a Starlight Booking!");

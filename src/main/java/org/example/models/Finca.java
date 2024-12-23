@@ -1,9 +1,11 @@
 package org.example.models;
 
+import org.example.models.interfaces.IDiaDeSol;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Finca extends Alojamiento implements IDiaDeSol{
+public class Finca extends Alojamiento implements IDiaDeSol {
     private DiaDeSolData diaDeSol;
 
     public Finca(String nombreAlojamiento, String ciudadDestino, Integer maxAdultos, Integer maxNinos, Double calificacion, ArrayList<Habitacion> habitacion, DiaDeSolData diaDeSol) {
